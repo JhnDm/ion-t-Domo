@@ -1,0 +1,7 @@
+{
+  "name": "ion-t-Domo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
