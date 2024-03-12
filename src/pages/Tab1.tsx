@@ -23,7 +23,7 @@ const Tab1: React.FC = () => {
             <IonCardSubtitle>BSIT Third Year</IonCardSubtitle>
           </IonCardHeader>
 
-          <IonCardContent>Nothing</IonCardContent>
+          <IonCardContent>Quote: Try and try until you succeeed</IonCardContent>
         </IonCard>
             
           </IonContent>
