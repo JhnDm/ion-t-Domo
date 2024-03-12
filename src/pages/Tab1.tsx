@@ -28,16 +28,42 @@ const Tab1: React.FC = () => {
 
           <IonCardContent>Quote: Try and try until you succeed</IonCardContent>
          <IonButton id="present-alert" expand="full">Quick facts</IonButton>
-          <IonAlert
+         <IonAlert
             trigger="present-alert"
             header="A Short Title Is Best"
             subHeader="A Sub Header Is Optional"
             message="A message should be a short, complete sentence."
-            buttons={['Action']}
-
-
-            
+            buttons={['Action']} 
       ></IonAlert>
+
+      <IonButton id="open-action-sheet" expand="block">Open Action Sheet</IonButton>
+      <IonActionSheet
+            trigger="open-action-sheet"
+            header="Actions"
+            buttons={[
+              {
+                text: 'Delete',
+                role: 'destructive',
+                data: {
+                  action: 'delete',
+                },
+              },
+              {
+                text: 'Share',
+                data: {
+                  action: 'share',
+                },
+              },
+              {
+                text: 'Cancel',
+                role: 'cancel',
+                data: {
+                  action: 'cancel',
+                },
+              },
+            ]}
+          ></IonActionSheet>
+      
         </IonCard>
       
         
