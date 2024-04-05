@@ -1,10 +1,10 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab3.css';
+import './calculator.css';
 import React, { useState } from 'react';
 
 
-const Tab3: React.FC = () => {
+const Calculator: React.FC = () => {
   const [expression, setExpression] = useState('');
 
   const handleClick = (value: string) => {
@@ -63,4 +63,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default Calculator;
