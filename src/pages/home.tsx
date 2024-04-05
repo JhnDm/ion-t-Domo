@@ -1,29 +1,40 @@
+import React from 'react';
 import {
-    //Initial Components
-    IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonButton,
 } from '@ionic/react';
+import { useHistory } from 'react-router-dom'; // Import useHistory hook
 
-// CSS
-//import './profile.css';
-  
-  const Home: React.FC = () => {
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Home</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-        </IonContent>
-      </IonPage>
-    );
+import './home.css';
+
+const Home: React.FC = () => {
+  const history = useHistory(); // Initialize useHistory hook
+
+  const navigateToProfile = () => {
+    history.push('/profile'); // Navigate to the '/profile' route
   };
-  
-  //
-  export default Home;
+
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Home</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <div className="welcome-text">
+          <h1>Welcome to my App!</h1>
+          <p>Feel free to open any tabs of this app.</p>
+          {/* Use navigateToProfile function on button click */}
+          <IonButton onClick={navigateToProfile} color="primary">Go to Profile</IonButton>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Home;
