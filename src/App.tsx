@@ -72,7 +72,7 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="Profile" href="/profile">
             <IonIcon aria-hidden="true" icon={informationCircleOutline} />
-            <IonLabel>Profile</IonLabel>
+            <IonLabel>Info</IonLabel>
           </IonTabButton>
 
            {/*  
