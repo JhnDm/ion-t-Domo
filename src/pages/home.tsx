@@ -1,40 +1,29 @@
 import React from 'react';
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonButton,
-} from '@ionic/react';
-import { useHistory } from 'react-router-dom'; // Import useHistory hook
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonHeader, IonToolbar, IonTitle, IonIcon } from '@ionic/react';
+import { speedometerOutline } from 'ionicons/icons';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
-import './home.css';
-
-const Home: React.FC = () => {
-  const history = useHistory(); // Initialize useHistory hook
-
-  const navigateToProfile = () => {
-    history.push('/profile'); // Navigate to the '/profile' route
-  };
-
+function home() {
   return (
-    <IonPage>
+    <>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <div className="welcome-text">
-          <h1>Welcome to my App!</h1>
-          <p>Feel free to open any tabs of this app.</p>
-          {/* Use navigateToProfile function on button click */}
-          <IonButton onClick={navigateToProfile} color="primary">Go to Profile</IonButton>
-        </div>
-      </IonContent>
-    </IonPage>
-  );
-};
 
-export default Home;
+      <IonCard>
+        <IonCardHeader>
+          <IonCardTitle>Click-counter</IonCardTitle>
+        </IonCardHeader>
+        {/* Example button with icon */}
+        <Link to="/clickcounter"><IonButton>
+            <IonIcon slot="icon-only" icon={speedometerOutline} />
+          </IonButton>
+        </Link>
+      </IonCard>
+    </>
+  );
+}
+
+export default home;
