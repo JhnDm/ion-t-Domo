@@ -13,9 +13,9 @@ import { IonReactRouter } from '@ionic/react-router';
 import { calculatorOutline, closeOutline, ellipse, home, homeOutline, informationCircleOutline, personOutline, speedometerOutline, square, triangle } from 'ionicons/icons';
 // Home resources
 import Home from './pages/home';
-{/*import Tab1 from './pages/profile';*/}
+import ClickCounter from './pages/clickcounter';
 import Tab2 from './pages/profile';
-{/*import Tab3 from './pages/calculator';*/}
+import Tab3 from './pages/calculator';
 
 
 
@@ -57,6 +57,8 @@ const App: React.FC = () => (
           {/* <Route exact path="/profile" component={Tab1} />*/}
           <Route exact path="/profile" component={Tab2} />
           {/* <Route exact path="/calculator" component={Tab3} />*/}
+          <Route exact path="/clickcounter" component={ClickCounter} />
+
       
         </IonRouterOutlet>
 
@@ -76,10 +78,7 @@ const App: React.FC = () => (
           </IonTabButton>
 
             
-         {/*  <IonTabButton tab="Click counter" href="/clickcounter">
-            <IonIcon aria-hidden="true" icon={speedometerOutline} />
-            <IonLabel>Click Counter</IonLabel>
-          </IonTabButton>
+         {/* 
           <IonTabButton tab="tab3" href="/calculator">
             <IonIcon aria-hidden="true" icon={calculatorOutline} />
             <IonLabel>Calculator</IonLabel>

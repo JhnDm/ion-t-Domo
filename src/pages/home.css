@@ -17,3 +17,7 @@
 .welcome-text p {
   margin-top: 10px; 
 }
+
+ion-item {
+  --padding-start: 0;
+}
