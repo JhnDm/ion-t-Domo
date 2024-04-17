@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 
 import './home.css';
@@ -21,7 +21,6 @@ const Home: React.FC = () => {
       <IonContent fullscreen>
         <div className="welcome-text">
           <h1>Welcome to my App!</h1>
-          <p>Feel free to open any tabs of this app.</p>
         </div>
       </IonContent>
     </IonPage>

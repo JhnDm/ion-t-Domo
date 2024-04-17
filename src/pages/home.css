@@ -1,18 +1,19 @@
 .welcome-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    background-color: skyblue;
-    color: black; 
-  }
-  
-  .welcome-text h1 {
-    font-size: 2rem; 
-  }
-  
-  .welcome-text p {
-    margin-top: 10px; 
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center; 
+  height: 100vh; 
+  background-color: skyblue;
+  color: black; 
+  padding: 20px; /* Add padding for spacing */
+}
+
+.welcome-text h1 {
+  font-size: 2rem; 
+  margin-bottom: 10px; /* Add margin below h1 */
+}
+
+.welcome-text p {
+  margin-top: 10px; 
+}
