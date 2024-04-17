@@ -15,7 +15,7 @@ import { calculatorOutline, closeOutline, ellipse, home, homeOutline, informatio
 import Home from './pages/home';
 import ClickCounter from './pages/clickcounter';
 import Tab2 from './pages/profile';
-import Tab3 from './pages/calculator';
+import Calculator from './pages/calculator';
 
 
 
@@ -56,8 +56,10 @@ const App: React.FC = () => (
           <Route exact path="/home" component={Home} />
           {/* <Route exact path="/profile" component={Tab1} />*/}
           <Route exact path="/profile" component={Tab2} />
-          {/* <Route exact path="/calculator" component={Tab3} />*/}
+          {/* <Route exact path="/clickcounter" component={Tab3} />*/}
           <Route exact path="/clickcounter" component={ClickCounter} />
+           {/* <Route exact path="/calculator" component={Tab3} />*/}
+           <Route exact path="/calculator" component={Calculator} />
 
       
         </IonRouterOutlet>
