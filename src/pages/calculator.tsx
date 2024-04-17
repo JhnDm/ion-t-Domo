@@ -32,6 +32,9 @@ const Calculator: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <br />
+        <br />
+        <br />
       <div className="calculator">
       <input className="expression" value={expression} readOnly />
       <div className="buttons">

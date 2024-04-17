@@ -66,16 +66,16 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Profile" href="/profile">
+         {/*  <IonTabButton tab="Profile" href="/profile">
             <IonIcon aria-hidden="true" icon={closeOutline} />
             <IonLabel>Blank</IonLabel>
-          </IonTabButton>
+          </IonTabButton>*/}
           <IonTabButton tab="Profile" href="/profile">
             <IonIcon aria-hidden="true" icon={informationCircleOutline} />
             <IonLabel>Info</IonLabel>
           </IonTabButton>
 
-           {/*  
+            
           <IonTabButton tab="Click counter" href="/clickcounter">
             <IonIcon aria-hidden="true" icon={speedometerOutline} />
             <IonLabel>Click Counter</IonLabel>
@@ -83,7 +83,7 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/calculator">
             <IonIcon aria-hidden="true" icon={calculatorOutline} />
             <IonLabel>Calculator</IonLabel>
-          </IonTabButton>*/}
+          </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
