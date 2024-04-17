@@ -22,13 +22,13 @@ const Home: React.FC = () => {
     <IonContent fullscreen>
       <div className="welcome-text">
         <h1>Welcome to my App!</h1>
-        <IonCard>
+        <IonCard className="custom-card">
           <IonCardContent>
             <IonList>
               <IonItem>
                 <IonThumbnail slot="start">
                 <IonRouterLink href="./clickcounter">
-                      <IonIcon icon={speedometerOutline} /> {/* Use the icon you want */}
+                <IonIcon icon={speedometerOutline} style={{ fontSize: '4rem' }} />
                     </IonRouterLink>
                 </IonThumbnail>
                 <IonLabel>Click Counter</IonLabel>
