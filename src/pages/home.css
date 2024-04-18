@@ -23,7 +23,7 @@ ion-item {
 }
 .custom-card {
   width: 17%;
-  max-width: 400px; /* Adjust max-width as needed */
+  max-width: 400px; /* Adjust max-width*/
   margin: 0 auto; /* Center the card horizontally */
   padding: 3px; /* Add padding to the card content */
 }
