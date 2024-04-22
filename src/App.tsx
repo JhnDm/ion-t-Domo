@@ -16,6 +16,8 @@ import Home from './pages/home';
 import ClickCounter from './pages/clickcounter';
 import Tab2 from './pages/profile';
 import Calculator from './pages/calculator';
+import ToDoListApp from './pages/ToDolist';
+
 
 
 
@@ -38,6 +40,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import TodoListApp from './pages/ToDolist';
 
 setupIonicReact();
 
@@ -56,10 +59,13 @@ const App: React.FC = () => (
           <Route exact path="/home" component={Home} />
           {/* <Route exact path="/profile" component={Tab1} />*/}
           <Route exact path="/profile" component={Tab2} />
-          {/* <Route exact path="/clickcounter" component={Tab3} />*/}
+          {/* <Route exact path="/clickcounter" >*/}
           <Route exact path="/clickcounter" component={ClickCounter} />
-           {/* <Route exact path="/calculator" component={Tab3} />*/}
+           {/* <Route exact path="/calculator" >*/}
            <Route exact path="/calculator" component={Calculator} />
+            {/* <Route exact path="/ToDoList" >*/}
+            <Route exact path="/TodoListApp" component={TodoListApp} />
+
 
       
         </IonRouterOutlet>

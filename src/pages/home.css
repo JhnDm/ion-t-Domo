@@ -27,3 +27,35 @@ ion-item {
   margin: 0 auto; /* Center the card horizontally */
   padding: 3px; /* Add padding to the card content */
 }
+
+
+/* Adjust card width for medium-sized screens */
+@media (min-width: 576px) {
+  .custom-card {
+    width: 70%;
+  }
+}
+
+
+/* Adjust card width for large-sized screens */
+@media (min-width: 768px) {
+  .custom-card {
+    width: 50%;
+  }
+}
+
+
+/* Adjust card width for extra large screens */
+@media (min-width: 992px) {
+  .custom-card {
+    width: 40%;
+  }
+}
+
+
+/* Adjust card width for extra extra large screens */
+@media (min-width: 1200px) {
+  .custom-card {
+    width: 30%;
+  }
+}
