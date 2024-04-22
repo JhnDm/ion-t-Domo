@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCard,IonCardCon
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 
 import './home.css';
-import { calculatorOutline, closeOutline, speedometerOutline } from 'ionicons/icons';
+import { calculatorOutline, closeOutline, listCircleOutline, listOutline, speedometerOutline } from 'ionicons/icons';
 
 const Home: React.FC = () => {
   const history = useHistory(); // Initialize useHistory hook
@@ -45,11 +45,11 @@ const Home: React.FC = () => {
               <br />
               <IonItem>
                 <IonThumbnail slot="start">
-                <IonRouterLink href="">
-                <IonIcon icon={closeOutline} style={{ fontSize: '4rem' }} />
+                <IonRouterLink href="./TodoListApp">
+                <IonIcon icon={listOutline} style={{ fontSize: '4rem' }} />
                     </IonRouterLink>
                 </IonThumbnail>
-                <IonLabel>Blank</IonLabel>
+                <IonLabel>To Do List</IonLabel>
               </IonItem>
               <br />
               <IonItem>
