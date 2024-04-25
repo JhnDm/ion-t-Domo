@@ -67,6 +67,15 @@ const TodoListApp: React.FC = () => {
         <br />
         <br />
         <br />
+        <IonItem>
+          <IonInput
+            placeholder="Enter a new todo"
+            value={newTodo}
+            onIonChange={(e) => setNewTodo(e.detail.value!)} 
+          />
+          <IonButton slot="end" onClick={addTodo}>Add</IonButton>
+        </IonItem>
+        <br />
         <IonList>
           {todos.map((todo) => (
             <IonItem key={todo.id}>
@@ -82,14 +91,7 @@ const TodoListApp: React.FC = () => {
             </IonItem>
           ))}
         </IonList>
-        <IonItem>
-          <IonInput
-            placeholder="Enter a new todo"
-            value={newTodo}
-            onIonChange={(e) => setNewTodo(e.detail.value!)} 
-          />
-          <IonButton slot="end" onClick={addTodo}>Add</IonButton>
-        </IonItem>
+       
       </IonContent>
     </IonApp>
   );
