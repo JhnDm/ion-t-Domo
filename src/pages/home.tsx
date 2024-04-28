@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       title: 'Quote Generator',
       icon: chatboxOutline,
       subtitle: 'Applet #3',
-      link: '/quotegenerator'
+      link: '/QuoteGenerator'
     },
     
   ];
