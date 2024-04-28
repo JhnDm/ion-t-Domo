@@ -3,7 +3,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonCard,IonCardCon
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 
 import './home.css';
-import { calculatorOutline, closeOutline, listCircleOutline, listOutline, speedometerOutline } from 'ionicons/icons';
+import { calculatorOutline, chatboxOutline, closeOutline, listCircleOutline, listOutline, speedometerOutline } from 'ionicons/icons';
 
 const Home: React.FC = () => {
   const history = useHistory(); // Initialize useHistory hook
@@ -30,7 +30,12 @@ const Home: React.FC = () => {
       subtitle: 'Applet #3',
       link: '/ToDolistApp'
     },
-   
+    {
+      title: 'Quote Generator',
+      icon: chatboxOutline,
+      subtitle: 'Applet #3',
+      link: '/quotegenerator'
+    },
     
   ];
 
