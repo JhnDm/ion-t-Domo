@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   IonApp,
   IonHeader,
@@ -12,48 +12,49 @@ import {
   IonInput,
   IonButton,
 } from '@ionic/react';
-import { useHistory } from 'react-router-dom'; // Import useHistory hook
-
+import { useHistory } from 'react-router-dom';
+import { collection, addDoc, onSnapshot, updateDoc, deleteDoc, doc } from 'firebase/firestore';
+import { db } from './firebase';
 
 interface Todo {
-  id: number;
+  id: string;
   text: string;
   completed: boolean;
 }
 
-
 const TodoListApp: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
-  const history = useHistory(); // Initialize useHistory hook
+  const history = useHistory();
 
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, 'todos'), (snapshot) => {
+      setTodos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Todo)));
+    });
 
+    return () => unsubscribe();
+  }, []);
 
-
-  const addTodo = () => {
+  const addTodo = async () => {
     if (newTodo.trim() !== '') {
-      setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
+      const docRef = await addDoc(collection(db, 'todos'), { text: newTodo, completed: false });
       setNewTodo('');
     }
   };
 
-
-  const toggleTodo = (id: number) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
+  const toggleTodo = async (id: string) => {
+    const todoRef = doc(db, 'todos', id);
+    await updateDoc(todoRef, { completed: !todos.find(todo => todo.id === id)?.completed });
   };
 
-
-  const deleteTodo = (id: number) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  const deleteTodo = async (id: string) => {
+    const todoRef = doc(db, 'todos', id);
+    await deleteDoc(todoRef);
   };
+
   const handleBack = () => {
-    history.push('/home'); // Navigate back to the home page
+    history.push('/home');
   };
-
 
   return (
     <IonApp>
@@ -71,7 +72,7 @@ const TodoListApp: React.FC = () => {
           <IonInput
             placeholder="Enter a new todo"
             value={newTodo}
-            onIonChange={(e) => setNewTodo(e.detail.value!)} 
+            onIonChange={(e) => setNewTodo(e.detail.value!)}
           />
           <IonButton slot="end" onClick={addTodo}>Add</IonButton>
         </IonItem>
@@ -91,15 +92,9 @@ const TodoListApp: React.FC = () => {
             </IonItem>
           ))}
         </IonList>
-       
       </IonContent>
     </IonApp>
   );
 };
 
-
 export default TodoListApp;
-
-
-
-
