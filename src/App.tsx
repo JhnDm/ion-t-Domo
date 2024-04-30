@@ -12,12 +12,12 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { calculatorOutline, closeOutline, ellipse, home, homeOutline, informationCircleOutline, personOutline, speedometerOutline, square, triangle } from 'ionicons/icons';
 // Home resources
-import Home from './pages/home';
-import ClickCounter from './pages/clickcounter';
-import Tab2 from './pages/profile';
-import Calculator from './pages/calculator';
-import ToDoListApp from './pages/ToDolist';
-import QuoteGenarator from './pages/quotegenerator';
+import Home from './pages/home/home';
+import ClickCounter from './pages/clickcounter/clickcounter';
+import Tab2 from './pages/profile/profile';
+import Calculator from './pages/calculator/calculator';
+import ToDoListApp from './pages/ToDoList/ToDolist';
+import QuoteGenarator from './pages/quotegenerator/quotegenerator';
 import notes from './pages/notes/notes'
 
 
@@ -42,7 +42,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import TodoListApp from './pages/ToDolist';
+import TodoListApp from './pages/ToDoList/ToDolist';
 
 setupIonicReact();
 

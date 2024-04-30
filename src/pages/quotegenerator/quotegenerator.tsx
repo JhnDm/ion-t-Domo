@@ -12,7 +12,7 @@ import {
   IonAlert,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
-import rizzCard from '../Assets/json/rizzCard.json';
+import rizzCard from '../../Assets/json/rizzCard.json';
 
 const QuoteGenerator: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
