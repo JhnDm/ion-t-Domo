@@ -18,6 +18,7 @@ import Tab2 from './pages/profile';
 import Calculator from './pages/calculator';
 import ToDoListApp from './pages/ToDolist';
 import QuoteGenarator from './pages/quotegenerator';
+import notes from './pages/notes/notes'
 
 
 
@@ -68,6 +69,8 @@ const App: React.FC = () => (
             <Route exact path="/TodoListApp" component={TodoListApp} />
             {/* <Route exact path="/QuoteGenerator" >*/}
             <Route exact path="/QuoteGenerator" component={QuoteGenarator} />
+             {/* <Route exact path="/notes" >*/}
+             <Route exact path="/notes" component={notes} />
 
 
       
