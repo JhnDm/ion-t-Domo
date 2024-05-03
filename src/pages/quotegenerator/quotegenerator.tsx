@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   IonButton,
   IonCol,
@@ -12,23 +12,30 @@ import {
   IonAlert,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
-import rizzCard from '../../Assets/json/rizzCard.json';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from './firebase';
 
 const QuoteGenerator: React.FC = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const [quotes, setQuotes] = useState<string[]>([]);
   const [randomIndex, setRandomIndex] = useState<number | null>(null);
-  const history = useHistory(); // Initialize useHistory hook
+  const history = useHistory();
+
+  useEffect(() => {
+    const fetchQuotes = async () => {
+      try {
+        const quotesSnapshot = await getDocs(collection(db, 'quotes'));
+        const quotesData = quotesSnapshot.docs.map(doc => doc.data().message);
+        setQuotes(quotesData);
+      } catch (error) {
+        console.error('Error fetching quotes:', error);
+      }
+    };
+    fetchQuotes();
+  }, []);
 
   const generateRandomIndex = () => {
-    return Math.floor(Math.random() * rizzCard.length);
-  };
-
-  const renderRandomMessage = () => {
-    if (randomIndex !== null) {
-      return rizzCard[randomIndex].message;
-    } else {
-      return '';
-    }
+    return Math.floor(Math.random() * quotes.length);
   };
 
   const handleOpenAlert = () => {
@@ -42,8 +49,12 @@ const QuoteGenerator: React.FC = () => {
     setShowAlert(false);
   };
 
+  const renderRandomMessage = () => {
+    return randomIndex !== null ? quotes[randomIndex] : '';
+  };
+
   const handleBack = () => {
-    history.push('/home'); // Navigate back to the home page
+    history.push('/home');
   };
 
   return (
