@@ -30,9 +30,8 @@ const profile: React.FC = () => {
          <IonButton id="present-alert" expand="full">Quick facts</IonButton>
          <IonAlert
             trigger="present-alert"
-            header="A Short Title Is Best"
-            subHeader="A Sub Header Is Optional"
-            message="A message should be a short, complete sentence."
+            header="Facts"
+            message="I am scared of frogs."
             buttons={['Action']} 
       ></IonAlert>
 

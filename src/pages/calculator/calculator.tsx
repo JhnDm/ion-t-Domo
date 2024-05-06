@@ -1,5 +1,4 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 import './calculator.css';
 import React, { useState } from 'react';
