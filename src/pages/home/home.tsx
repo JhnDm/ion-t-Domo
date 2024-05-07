@@ -16,31 +16,31 @@ const Home: React.FC = () => {
       title: 'Click Counter',
       icon: speedometerOutline,
       subtitle: 'Applet #1',
-      link: '/clickcounter'
+      link: 'ion-t-domo/clickcounter'
     },
     {
       title: 'Calculator',
       icon: calculatorOutline,
       subtitle: 'Applet #2',
-      link: '/calculator'
+      link: 'ion-t-domo/calculator'
     },
     {
       title: 'To Do List',
       icon: listCircleOutline,
       subtitle: 'Applet #3',
-      link: '/ToDolistApp'
+      link: 'ion-t-domo/ToDolistApp'
     },
     {
       title: 'Quote Generator',
       icon: chatboxOutline,
       subtitle: 'Applet #3',
-      link: '/QuoteGenerator'
+      link: 'ion-t-domo/QuoteGenerator'
     },
     {
       title: 'Notes',
       icon: readerOutline,
       subtitle: 'Applet #4',
-      link: '/notes'
+      link: 'ion-t-domo/notes'
     },
     
   ];
