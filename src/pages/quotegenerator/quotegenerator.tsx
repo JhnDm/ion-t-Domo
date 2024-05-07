@@ -61,11 +61,11 @@ const QuoteGenerator: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
           <IonTitle>Quote Generator</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonButton onClick={handleBack}>Back</IonButton>
         <IonGrid>
           <IonRow className="ion-justify-content-center">
             <img
