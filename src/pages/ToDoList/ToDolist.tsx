@@ -60,11 +60,11 @@ const TodoListApp: React.FC = () => {
     <IonApp>
       <IonHeader>
         <IonToolbar>
+        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
           <IonTitle>To-Do List</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonButton onClick={handleBack}>Back</IonButton>
         <br />
         <br />
         <br />
