@@ -53,8 +53,14 @@ const App: React.FC = () => (
         
         <IonRouterOutlet>
            {/* Application default route */}
-           <Route exact path="/">
-            <Redirect to="/home" />
+           <Route exact path="/ion-t-domo/">
+            <Redirect to="/ion-t-domo/home" />
+          </Route>
+          <Route exact path="/ion-t-domo/home">
+            <Home />
+          </Route>
+          <Route exact path="/ion-t-domo/profile">
+            <Tab2 />
           </Route>
 
           {/* Home Router */}
@@ -78,11 +84,11 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           {/* Home Tab Button */}
-          <IonTabButton tab="home" href="/home">
+          <IonTabButton tab="home" href="ion-t-domo/home">
             <IonIcon aria-hidden="true" icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Profile" href="/profile">
+          <IonTabButton tab="Profile" href="ion-t-domo/profile">
             <IonIcon aria-hidden="true" icon={informationCircleOutline} />
             <IonLabel>Info</IonLabel>
           </IonTabButton>
