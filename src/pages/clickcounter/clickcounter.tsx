@@ -19,12 +19,11 @@ const ClickCounter: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
           <IonTitle>Click Counter</IonTitle>
         </IonToolbar>
       </IonHeader>
-
       <IonContent>
-        <IonButton onClick={handleBack}>Back</IonButton>
         <br />
         <br />
         <br /> 
