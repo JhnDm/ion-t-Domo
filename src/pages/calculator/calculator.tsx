@@ -33,11 +33,11 @@ const Calculator: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
           <IonTitle>Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-      <IonButton onClick={handleBack}>Back</IonButton>
         <br />
         <br />
         <br />
