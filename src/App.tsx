@@ -16,9 +16,9 @@ import Home from './pages/home/home';
 import ClickCounter from './pages/clickcounter/clickcounter';
 import Tab2 from './pages/profile/profile';
 import Calculator from './pages/calculator/calculator';
-import ToDoListApp from './pages/ToDoList/ToDolist';
+import ToDoList from './pages/ToDoList/ToDolist';
 import QuoteGenarator from './pages/quotegenerator/quotegenerator';
-import notes from './pages/notes/notes'
+import Notes from './pages/notes/notes'
 
 
 
@@ -62,6 +62,21 @@ const App: React.FC = () => (
           <Route exact path="/ion-t-domo/profile">
             <Tab2 />
           </Route>
+          <Route exact path="/ion-t-domo/home/clickcounter">
+            <ClickCounter />
+          </Route>
+          <Route exact path="/ion-t-domo/home/calculator">
+            <Calculator />
+          </Route>
+          <Route exact path="/ion-t-domo/home/todolist">
+            <ToDoList  />
+          </Route>
+          <Route exact path="/ion-t-domo/home/quotegenerator">
+            <QuoteGenarator />
+          </Route>
+          <Route exact path="/ion-t-domo/home/notes">
+            <Notes />
+          </Route>
 
           {/* Home Router */}
           <Route exact path="/home" component={Home} />
@@ -76,7 +91,7 @@ const App: React.FC = () => (
             {/* <Route exact path="/QuoteGenerator" >*/}
             <Route exact path="/QuoteGenerator" component={QuoteGenarator} />
              {/* <Route exact path="/notes" >*/}
-             <Route exact path="/notes" component={notes} />
+             <Route exact path="/notes" component={Notes} />
 
 
       
@@ -84,11 +99,11 @@ const App: React.FC = () => (
 
         <IonTabBar slot="bottom">
           {/* Home Tab Button */}
-          <IonTabButton tab="home" href="ion-t-domo/home">
+          <IonTabButton tab="home" href="/ion-t-domo/home">
             <IonIcon aria-hidden="true" icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="Profile" href="ion-t-domo/profile">
+          <IonTabButton tab="Profile" href="/ion-t-domo/profile">
             <IonIcon aria-hidden="true" icon={informationCircleOutline} />
             <IonLabel>Info</IonLabel>
           </IonTabButton>
