@@ -10,6 +10,8 @@ import {
   IonTitle,
   IonToolbar,
   IonAlert,
+  IonBackButton,
+  IonButtons,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 import { collection, getDocs } from 'firebase/firestore';
@@ -61,7 +63,9 @@ const QuoteGenerator: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
+        <IonButtons slot='start'>
+              <IonBackButton defaultHref='/app/home'/>
+           </IonButtons>
           <IonTitle>Quote Generator</IonTitle>
         </IonToolbar>
       </IonHeader>

@@ -16,31 +16,31 @@ const Home: React.FC = () => {
       title: 'Click Counter',
       icon: speedometerOutline,
       subtitle: 'Applet #1',
-      link: 'ion-t-domo/clickcounter'
+      link: '/ion-t-domo/home/clickcounter'
     },
     {
       title: 'Calculator',
       icon: calculatorOutline,
       subtitle: 'Applet #2',
-      link: 'ion-t-domo/calculator'
+      link: '/ion-t-domo/home/calculator'
     },
     {
       title: 'To Do List',
       icon: listCircleOutline,
       subtitle: 'Applet #3',
-      link: 'ion-t-domo/ToDolistApp'
+      link: '/ion-t-domo/home/todolist'
     },
     {
       title: 'Quote Generator',
       icon: chatboxOutline,
       subtitle: 'Applet #3',
-      link: 'ion-t-domo/QuoteGenerator'
+      link: '/ion-t-domo/home/QuoteGenerator'
     },
     {
       title: 'Notes',
       icon: readerOutline,
       subtitle: 'Applet #4',
-      link: 'ion-t-domo/notes'
+      link: '/ion-t-domo/home/notes'
     },
     
   ];
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
       {cardData
         .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
         .map((card, index) => (
-          <IonCard key={index} href={card.link}>
+          <IonCard key={index} routerLink={card.link} routerDirection='forward'>
             <IonCardHeader>
               <IonCardTitle>
                 <IonGrid>

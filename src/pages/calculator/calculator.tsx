@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonBackButton, IonButtons } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Import useHistory hook
 import './calculator.css';
 import React, { useState } from 'react';
@@ -33,7 +33,9 @@ const Calculator: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
+          <IonButtons slot='start'>
+              <IonBackButton defaultHref='/home'/>
+           </IonButtons>
           <IonTitle>Calculator</IonTitle>
         </IonToolbar>
       </IonHeader>

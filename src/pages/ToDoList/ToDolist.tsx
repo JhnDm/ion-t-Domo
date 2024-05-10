@@ -11,6 +11,8 @@ import {
   IonCheckbox,
   IonInput,
   IonButton,
+  IonBackButton,
+  IonButtons,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import { collection, addDoc, onSnapshot, updateDoc, deleteDoc, doc } from 'firebase/firestore';
@@ -60,7 +62,9 @@ const TodoListApp: React.FC = () => {
     <IonApp>
       <IonHeader>
         <IonToolbar>
-        <IonButton slot="start" onClick={handleBack}>Back</IonButton>
+        <IonButtons slot='start'>
+              <IonBackButton defaultHref='/home'/>
+           </IonButtons>
           <IonTitle>To-Do List</IonTitle>
         </IonToolbar>
       </IonHeader>
